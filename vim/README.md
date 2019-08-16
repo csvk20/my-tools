@@ -4,7 +4,7 @@ Instructions and important config files for setting up a beautiful and productiv
 
 ## First things first
 Create a .vimrc  
-You can find the [.vimrc]('.vimrc')
+You can find the [.vimrc]('./.vimrc')
 
 ## Install Vundle
 
@@ -22,5 +22,5 @@ The package list is already in the .vimrc
 
 ## Support packages
 Now add the support packages into their place.  
-I use solarized color panel. This can be found inside [colors]('colors')  
-The syntax files for different languages can be found inside [syntax]('syntax') folder
+I use solarized color panel. This can be found inside [colors]('./colors')  
+The syntax files for different languages can be found inside [syntax]('./syntax') folder
