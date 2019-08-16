@@ -13,7 +13,12 @@ Both are great. But with pathogen, there is no place to store the information
 of all the repositories that I have cloned where Vundle maintains that information 
 inside the .vimrc itself and setting up new PC with VIM takes less than 20 mins.
 
-You can install Vundle by following [this](https://github.com/VundleVim/Vundle.vim)
+You can install Vundle by following [this](https://github.com/VundleVim/Vundle.vim)  
+or  
+Clone the repository into your .vim directory
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
 
 ## Install the packages
 
