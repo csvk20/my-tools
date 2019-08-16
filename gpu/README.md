@@ -23,7 +23,7 @@ and if it is 390.xx, you may have to either upgrade to 410.xx or install CUDA9.0
 Please refer this [site]('https://docs.nvidia.com/deploy/cuda-compatibility/index.html') 
 for the compatibility related doubts. The image below also depicts the same.
 
-![](assests/forward-compatibility.png)  
+![](assets/forward-compatibility.png)  
 
 Now install the NVIDIA Driver  
 
