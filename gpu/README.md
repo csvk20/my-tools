@@ -20,7 +20,7 @@ Things that matter
 You are most likely to install the latest version of the NVIDIA drivers which would be 410.xx  
 In that case, you could install CUDA10.0. In case you already have NVIDA driver installed 
 and if it is 390.xx, you may have to either upgrade to 410.xx or install CUDA9.0  
-Please refer this [site]('https://docs.nvidia.com/deploy/cuda-compatibility/index.html') 
+Please refer this [site](https://docs.nvidia.com/deploy/cuda-compatibility/index.html) 
 for the compatibility related doubts. The image below also depicts the same.
 
 ![](assets/forward-compatibility.png)  
@@ -91,10 +91,10 @@ The below command should display the cudnn version
 ```
 
 ## References
-1. [Latest CUDA + Driver installation]('https://askubuntu.com/questions/1077061/how-do-i-install-nvidia-and-cuda-drivers-into-ubuntu')
-2. [Driver installation]('https://www.mvps.net/docs/install-nvidia-drivers-ubuntu-18-04-lts-bionic-beaver-linux/')
-3. [Driver installation command]('https://askubuntu.com/questions/1085605/nvidia-driver-410-listed-by-ppa-and-ubuntu-drivers-but-does-not-seem-to-be-insta?rq=1')
-4. [Driver and CUDA installation separately]('http://www.askaswiss.com/2019/01/how-to-install-cuda-9-cudnn-7-ubuntu-18-04.html')
+1. [Latest CUDA + Driver installation](https://askubuntu.com/questions/1077061/how-do-i-install-nvidia-and-cuda-drivers-into-ubuntu)
+2. [Driver installation](https://www.mvps.net/docs/install-nvidia-drivers-ubuntu-18-04-lts-bionic-beaver-linux/)
+3. [Driver installation command](https://askubuntu.com/questions/1085605/nvidia-driver-410-listed-by-ppa-and-ubuntu-drivers-but-does-not-seem-to-be-insta?rq=1)
+4. [Driver and CUDA installation separately](http://www.askaswiss.com/2019/01/how-to-install-cuda-9-cudnn-7-ubuntu-18-04.html)
 
 
 ## Install the RIGHT version of Tensorflow
@@ -107,7 +107,7 @@ Tensorflow's all latest versions support GPU's with Compute Complexity more than
 If you have an older GPU, you have to compile Tensorflow from the source with custom config  
 
 The version compatibility table between CUDA vs cudnn vs Tensorflow is given in 
-this [table]('https://www.tensorflow.org/install/source#tested_build_configurations')  
+this [table](https://www.tensorflow.org/install/source#tested_build_configurations)  
 
 To install  
 ```
