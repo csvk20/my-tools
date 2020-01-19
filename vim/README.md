@@ -29,3 +29,17 @@ The package list is already in the .vimrc
 Now add the support packages into their place.  
 I use solarized color panel. This can be found inside [colors](./colors)  
 The syntax files for different languages can be found inside [syntax](./syntax) folder
+
+## Support for Solarized colors
+To use solarized theme, follow the below steps  
+1. Copy the [colors](./colors) directory into the ~/.vim folder as shown in the last step
+2. Install the Powerline fonts from [here](https://github.com/powerline/fonts)
+3. Open terminal preferences and change the font to **Ubuntu Mono derivative Powerline**
+4. Add the below lines (which are already updated in .vimrc) to avoid the separator mismatch
+
+```
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+```
