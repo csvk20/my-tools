@@ -67,7 +67,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " added nerdtree
 Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'bling/vim-airline'
 Plugin 'terryma/vim-multiple-cursors'
@@ -77,6 +77,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'qpkorr/vim-bufkill'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -43,3 +43,12 @@ let g:airline_left_alt_sep = '⮁'
 let g:airline_right_sep = '⮂'
 let g:airline_right_alt_sep = '⮃'
 ```
+
+## Support for NERD Tree Dev-icons
+You may find your NERD tree's dev-icons are not broken. If that is the case, 
+download the patched font from [here](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/UbuntuMono/Regular/complete/Ubuntu%20Mono%20Nerd%20Font%20Complete%20Mono.ttf) 
+and install it.  
+
+### Installation
+Double click on the .ttf file and it would open up a window with sample characters.  
+You can find a Install button at the top right corner. Click it to install the fonts
