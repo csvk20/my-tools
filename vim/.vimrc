@@ -66,17 +66,17 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " added nerdtree
-Plugin 'scrooloose/nerdtree'
+Plugin 'preservim/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'bling/vim-airline'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'w0rp/ale'
+"Plugin 'w0rp/ale'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'qpkorr/vim-bufkill'
-Plugin 'jiangmiao/auto-pairs'
+"Plugin 'jiangmiao/auto-pairs'
 Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
@@ -106,34 +106,9 @@ nnoremap <C-Down> <C-w>j
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" NERDTress File highlighting
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
-
 " Start Nerd tree by typing vim
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-call NERDTreeHighlightFile('jade', 'DarkGreen', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
-call NERDTreeHighlightFile('ini', 'LightGreen', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-call NERDTreeHighlightFile('styl', 'DarkCyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('yml', 'LightGreen', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('conf', 'DarkGreen', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('vim', 'DarkGreen', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('config', 'DarkGreen', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('json', 'DarkGreen', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('html', 'DarkMagenta', 'none', '#ff00ff', '#151515')
-call NERDTreeHighlightFile('css', 'LightBlue', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('md', 'DarkCyan', 'none', '#ff00ff', '#151515')
-call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('ts', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('sh', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('py', 'DarkYellow', 'none', '#ff00ff', '#151515')
-call NERDTreeHighlightFile('txt', 'Magenta', 'none', '#ff00ff', '#151515')
 
 "-----Added for Highlighting spelling mistakes in comments-----
 autocmd BufRead,BufNewFile *.py setlocal spell
@@ -227,8 +202,8 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'python': ['flake8'],
 \}
-let g:ale_sign_error = '❌ '
-let g:ale_sign_warning = '⭕ '
+"let g:ale_sign_error = '❌ '
+"let g:ale_sign_warning = '⭕ '
 let g:ale_sign_column_always = 1
 
 "------ Shortcut for nerd commenter -----
@@ -236,7 +211,46 @@ let g:ale_sign_column_always = 1
 map <C-_> <Leader>c<Space>
 
 "------ Jedi-Vim Settings --------
-autocmd FileType python setlocal completeopt-=preview
+"autocmd FileType python setlocal completeopt-=preview
 
 "------ Enable backspace in INSERT mode -------
 set backspace=indent,eol,start
+
+" Note: Keep this at the end. Has conflict with some other setting above
+" NERDTress File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+" File types and color mapping
+" Executables
+call NERDTreeHighlightFile('sh', 'red', 'none', '#ffa500', '#151515')
+" Config files
+call NERDTreeHighlightFile('ini', 'darkmagenta', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('yml', 'darkmagenta', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('yaml', 'darkmagenta', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'darkmagenta', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('config', 'darkmagenta', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'darkmagenta', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('xml', 'darkmagenta', 'none', 'green', '#151515')
+" Web files
+call NERDTreeHighlightFile('html', 'magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('css', 'darkcyan', 'none', 'cyan', '#151515')
+" Scripting languages
+call NERDTreeHighlightFile('js', 'darkgreen', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('ts', 'darkgreen', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('py', 'darkgreen', 'none', '#ff00ff', '#151515')
+" CPP and C related
+call NERDTreeHighlightFile('cpp', 'darkgreen', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('c', 'lightblue', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('h', 'magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('cmake', 'darkyellow', 'none', '#ff00ff', '#151515')
+" Text files
+call NERDTreeHighlightFile('md', 'darkyellow', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('markdown', 'darkyellow', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('org', 'darkyellow', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('txt', 'darkyellow', 'none', '#ff00ff', '#151515')
+" Less used
+call NERDTreeHighlightFile('php', 'magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('vim', 'darkgreen', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('launch', 'darkcyan', 'none', 'yellow', '#151515')
