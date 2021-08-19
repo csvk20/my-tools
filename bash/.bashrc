@@ -156,10 +156,28 @@ alias nt='nautilus ./'
 alias cpdir='printf `pwd` | xclip -selection c'
 
 # Alias for custom written scripts
-alias change_ext='bash ~/dhivakar/sys/bin/change_ext'
+alias change_ext='bash ~/csvk20/sys/bin/change_ext'
 
 # Alias for activating environment in current directory
 alias activate_env='source venv_*/bin/activate'
 
 # Alias for appending all csv files excluding the header
 alias append_csv='awk "FNR > 1" *.csv > master.csv'
+
+#--------------------Added by Siva-------------------------------------------
+# NAavigation Shortcuts
+alias ..='cl ..'
+alias ...='cl ../../'
+alias ....='cl ../../../'
+alias .....='cl ../../../../'
+alias ......='cl ../../../../'
+alias .......='cl ../../../../../'
+alias ........='cl ../../../../../../'
+alias home='clear && cd ~ && ll'                                                # Home directory
+alias downloads='clear && cd ~/Downloads && ll'                                 # Downloads directory
+cs() { cd "$@" &&  ls; }                                                        # Enter directory and list contents with ls
+cl() { cd "$@" && ll; }                                                         # Enter directory and list contents with ll
+site() { clear && cl $HOME/sites/"$@"; }                                        # Access site folders easier
+wp-theme() { clear && cl $HOME/sites/"$@"/content/themes/"$@"; }                # Access a site theme folders easier
+project() { clear && cl $HOME/projects/"$@"; }                                  # Access project folders easier
+email() { clear && cl $HOME/projects/emails/"$@"; }                             # Access email folders easier
