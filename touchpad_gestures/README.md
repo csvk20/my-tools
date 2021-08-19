@@ -25,7 +25,7 @@ $ mkdir fusuma
 
 5. Copy the config.yml file to ~/.config directory
 
-6. Run the following command to install
+6. Run the following command to run fusuma in background
 ```bash 
-$ sudo fusuma
+$ sudo fusuma -d
 ```
