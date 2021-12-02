@@ -10,7 +10,7 @@ sudo gpasswd -a $USER input  # To add
 sudo apt install libinput-tools
 sudo apt install xdotool   # for sending shortcuts
 sudo apt install ruby
-sudo apt install ruby
+sudo gem install fusuma
 ```
 
 3. Go to config folder in home directory
@@ -25,7 +25,7 @@ mkdir fusuma
 
 5. Copy the config.yml file to ~/.config directory
 
-6. Run the following command to run fusuma in background
+6. Run the following command to run fusuma in background and add it in ~/.bashrc
 ```bash 
 sudo fusuma -d
 ```
